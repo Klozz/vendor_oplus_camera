@@ -204,6 +204,7 @@
 /(vendor|odm)/lib(64)?/libFaceBeautyPICap\.so    u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libsnpe_htp_system\.so    u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libPreviewAlgo\.fad\.so    u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libalog\.so               u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libalgo\.superphoto\.so    u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libalgo\.supernight\.so    u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libalgo\.scportrait\.so    u:object_r:same_process_hal_file:s0
