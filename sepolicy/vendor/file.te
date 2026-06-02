@@ -1,0 +1,4 @@
+type public_adsprpcd_file, file_type;
+type proc_ufs_file, file_type;
+typeattribute proc_ufs_file proc_type;
+type data_system_camera_rus, file_type, data_file_type, core_data_file_type;

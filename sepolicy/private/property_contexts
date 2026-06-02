@@ -1,0 +1,55 @@
+# Camera
+camera.feature.remote.enable        u:object_r:exported_system_prop:s0
+ro.camera.                          u:object_r:exported_system_prop:s0
+oppo.switch.video.beauty            u:object_r:exported_system_prop:s0
+persist.assert.panic.camera         u:object_r:exported_system_prop:s0
+persist.sys.camera.                 u:object_r:exported_system_prop:s0
+persist.ipe.debug                   u:object_r:exported_system_prop:s0
+oplus.camera.packname               u:object_r:exported_system_prop:s0
+oplus.camera.orms                   u:object_r:exported_system_prop:s0
+ro.vendor.oplus.camera.frontCamSize u:object_r:exported_system_prop:s0
+ro.vendor.oplus.camera.backCamSize  u:object_r:exported_system_prop:s0
+
+oplus.aps.logic.bokeh.mode        u:object_r:exported_system_prop:s0
+oplus.camera.adjexptime.ev        u:object_r:exported_system_prop:s0
+oplus.camera.adjexptime.ev1        u:object_r:exported_system_prop:s0
+oplus.camera.adjexptime.flag        u:object_r:exported_system_prop:s0
+oplus.camera.adjMemValue.value        u:object_r:exported_system_prop:s0
+oplus.camera.ainrToMfllIndexLimit.value        u:object_r:exported_system_prop:s0
+oplus.camera.aps3.pfbdump        u:object_r:exported_system_prop:s0
+oplus.camera.cali.dump_img        u:object_r:exported_system_prop:s0
+oplus.camera.pfb.platform        u:object_r:exported_system_prop:s0
+oplus.camera.pfdLog.enable        u:object_r:exported_system_prop:s0
+oplus.camera.sattele.enablegyrodata        u:object_r:exported_system_prop:s0
+oplus.camera.softentype        u:object_r:exported_system_prop:s0
+oplus.camera.thermalThrottle    u:object_r:exported_system_prop:s0
+oppo.camera.thermalThrottle    u:object_r:exported_system_prop:s0
+oplus.switch.video.beauty   u:object_r:exported_system_prop:s0
+com.oplus.motor.flashlight   u:object_r:exported_system_prop:s0
+com.oppo.motor.flashlight   u:object_r:exported_system_prop:s0
+oplus.camera.vd.fbenable        u:object_r:exported_system_prop:s0
+oplus.debug.night.ev.offset        u:object_r:exported_system_prop:s0
+oplus.debug.night.state        u:object_r:exported_system_prop:s0
+ro.oplus.camera.video.beauty.switch        u:object_r:exported_system_prop:s0
+ro.oplus.camera.video_beauty.prefix        u:object_r:exported_system_prop:s0
+ro.oplus.camera.thirdcap.refactor        u:object_r:exported_system_prop:s0
+oplus.camera.activityname               u:object_r:exported_system_prop:s0
+ro.camera.hfr.enable                   u:object_r:exported_default_prop:s0
+ro.camera.videoeis.enable              u:object_r:exported_default_prop:s0
+ro.camera.temperature.limit            u:object_r:exported_default_prop:s0
+persist.vendor.camera.autoImageDump                     u:object_r:exported_system_prop:s0
+persist.vendor.camera.autoImageDumpMask                 u:object_r:exported_system_prop:s0
+persist.vendor.camera.autoImageDumpIFEInstanceMask      u:object_r:exported_system_prop:s0
+persist.vendor.camera.autoImageDumpIFEoutputPortMask    u:object_r:exported_system_prop:s0
+persist.vendor.camera.autoImageDumpIPEInstanceMask      u:object_r:exported_system_prop:s0
+persist.vendor.camera.autoImageDumpIPEoutputPortMask    u:object_r:exported_system_prop:s0
+persist.vendor.camera.autoImageDumpBPSInstanceMask      u:object_r:exported_system_prop:s0
+persist.vendor.camera.autoImageDumpBPSoutputPortMask    u:object_r:exported_system_prop:s0
+persist.camera.aps.previewalgo.dumpenable               u:object_r:exported_system_prop:s0
+persist.camera.aps.previewalgo.dumpmask                 u:object_r:exported_system_prop:s0
+persist.camera.aps.snapshotalgo.dumpmask                u:object_r:exported_system_prop:s0
+
+
+
+# Region
+persist.sys.oppo.region             u:object_r:exported_system_prop:s0
