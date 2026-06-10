@@ -1,3 +1,4 @@
 allow cameraserver vendor_default_prop:file r_file_perms;
 allow cameraserver vendor_file:file r_file_perms;
 allow cameraserver data_system_camera_rus:dir search;
+allow cameraserver opluscamera_app:process setsched;
