@@ -292,6 +292,3 @@ system/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk.so:system_ext/lib64/vend
 # Oplus Camera Services & AI (OSense)
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 
-
-#odm/lib64/libEISLive.so
-odm/lib64/libAlgoProcess.so
