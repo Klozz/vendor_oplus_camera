@@ -1,0 +1,1 @@
+allow cameraserver opluscamera_app:process { setsched };
