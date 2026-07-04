@@ -1,0 +1,75 @@
+From ca6b4e796f5a7c84c9de20feb6ff6dafbbd43310 Mon Sep 17 00:00:00 2001
+From: klozz <carlosj@klozz.dev>
+Date: Sat, 4 Jul 2026 05:43:50 -0600
+Subject: [PATCH] OplusCamera: Bypass gallery dependency for watermark configuration
+
+When porting to AOSP, OplusCamera attempts to bind to the Oplus gallery
+(com.oneplus.gallery) for watermark settings. This results in a fatal
+SecurityException (bindService to com.oplus.ai.master.watermark.aidl)
+and crashes the app
+
+This patch modifies OplusConfigure (Ll6/pg.smali) to always return an
+empty string instead of the gallery package name. This successfully 
+tricks the camera app into falling back to its internal watermark 
+configuration UI, avoiding the external bindService call entirely.
+
+Change-Id: I04cda2af6398dc14bfa59c5c77e52e59708566b9
+Signed-off-by: klozz <carlosj@klozz.dev>
+---
+ smali/l6/pg.smali | 40 ++++------------------------------------
+ 1 file changed, 4 insertions(+), 36 deletions(-)
+
+diff --git a/smali/l6/pg.smali b/smali/l6/pg.smali
+index a254aa02..4c44857c 100644
+--- a/smali/l6/pg.smali
++++ b/smali/l6/pg.smali
+@@ -33,42 +33,10 @@
+ 
+ # virtual methods
+ .method public final a()Ljava/lang/String;
+-    .locals 0
++    .registers 2
+ 
+-    .line 1
+-    sget-boolean p0, Ll6/pg;->a:Z
+-
+-    .line 2
+-    .line 3
+-    if-eqz p0, :cond_0
+-
+-    .line 4
+-    .line 5
+-    const-string p0, "com.oneplus.gallery"
+-
+-    .line 6
+-    .line 7
+-    goto :goto_0
+-
+-    .line 8
+-    :cond_0
+-    sget-object p0, Lul/b$a;->a:Lul/b;
+-
+-    .line 9
+-    .line 10
+-    iget-object p0, p0, Lul/b;->a:Lul/b$b;
+-
+-    .line 11
+-    .line 12
+-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+-
+-    .line 13
+-    .line 14
+-    .line 15
+-    const-string p0, ""
++    # Force return empty string to bypass the OnePlus gallery dependency
++    const-string v0, ""
+ 
+-    .line 16
+-    .line 17
+-    :goto_0
+-    return-object p0
++    return-object v0
+ .end method
+-- 
+2.55.0
+
