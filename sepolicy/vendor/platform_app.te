@@ -1,1 +1,2 @@
 allow platform_app horae:binder call;
+allow platform_app system_oplus_touch_prop:file read;
