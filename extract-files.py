@@ -88,6 +88,8 @@ on property:sys.camera.user.removed=*
         .replace_needed('android.hardware.camera.provider-V3-ndk.so','android.hardware.camera.provider-V4-ndk.so')
         .replace_needed('android.hardware.camera.device-V3-ndk.so','android.hardware.camera.device-V4-ndk.so')
         .replace_needed('libbase.so', 'libbase-stock.so'),
+    'system_ext/lib64/libNativeWinBuffExchange.so': blob_fixup()
+        .sig_replace('e5 03 00 91 e0 03 14 aa e2 03 1f aa e3 03 1f aa', 'e5 03 00 91 e0 03 14 aa e2 03 1f aa e3 03 05 aa'),
 }  # fmt: skip
 
 namespace_imports = [
